@@ -5,4 +5,4 @@ about:
   template: jolla
 ---
 
-About this blog
+This Blog is about my exploration with GitHub and JupyterLab for the first time as well as understanding LLMs. 
