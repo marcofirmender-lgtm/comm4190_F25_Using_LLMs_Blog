@@ -1,5 +1,5 @@
 ---
-title: Exploring Github and Jupyter Notebook
+title: Exploring GitHub and Jupyter Notebook  and understanding LLMs
 listing:
   contents: posts
   sort: date desc
