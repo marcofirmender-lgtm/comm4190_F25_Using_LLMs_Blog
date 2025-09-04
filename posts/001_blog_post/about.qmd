@@ -1,0 +1,8 @@
+---
+title: About
+image: profile.jpg
+about:
+  template: jolla
+---
+
+This Blog is about my exploration with GitHub and JupyterLab for the first time. 
