@@ -1,6 +1,6 @@
 ---
-title:
-image:
+title: About Marco
+image: profile.jpg
 about:
   template: jolla
 ---
