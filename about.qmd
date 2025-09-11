@@ -1,8 +1,8 @@
 ---
 title: About
-image: profile.jpg
+image:
 about:
   template: jolla
 ---
 
-This Blog is about my exploration with GitHub and JupyterLab for the first time as well as understanding LLMs. 
+These blogs are about my explorations with AIs. Additionally, I will write about recent AI news from time to time. 
