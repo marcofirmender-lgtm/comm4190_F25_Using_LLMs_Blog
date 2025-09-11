@@ -1,5 +1,5 @@
 ---
-title: Exploring Github and Jupyter Notebook and understanding LLMs
+title: Marco's Blog
 listing:
   contents: posts
   sort: date desc
