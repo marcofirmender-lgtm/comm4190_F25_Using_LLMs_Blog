@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Marco Firmender">
+<meta name="dcterms.date" content="2025-09-10">
+<meta name="description" content="This blog is about a game I played with GPT 5.0, where I gave two very vivid prompts to GPT and had it return me an image as accurately and in depth as possible. I then gave it one vague description and compared the differences.">
 
-<title>Exploring Github and Jupyter Notebook and understanding LLMs</title>
+<title>Description Game – Exploring Github and Jupyter Notebook and understanding LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c197d14061efb02d426d9321f56b11e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c197d14061efb02d426d9321f56b11e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,77 +70,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Exploring Github and Jupyter Notebook and understanding LLMs</span>
     </a>
   </div>
@@ -150,7 +93,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -173,176 +116,70 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Exploring Github and Jupyter Notebook and understanding LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Description Game</h1>
+                  <div>
+        <div class="description">
+          This blog is about a game I played with GPT 5.0, where I gave two very vivid prompts to GPT and had it return me an image as accurately and in depth as possible. I then gave it one vague description and compared the differences.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">AI image generation</div>
+                <div class="quarto-category">Prompt Engineering</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Marco Firmender </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 10, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QUklMjBpbWFnZSUyMGdlbmVyYXRpb24=">AI image generation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2l0SHVi">GitHub <span class="quarto-category-count">(2)</span></div><div class="category" data-category="SnVweXRlckxhYg==">JupyterLab <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHJvbXB0JTIwRW5naW5lZXJpbmc=">Prompt Engineering <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p><strong>Trial 1</strong> I first tried to play this Game with Anthropic/Claude 3.5 but claude does not have image generation abilities and I did not know that. I then switched to ChatGPT 5.0.</p>
+<p>Description given to GPT: For this first image, I would like you to generate an Instagram post-sized (1080p x 1080p) picture of myself flying through the sky on a sunny day with a few clouds, on a Griffin from Greek mythology with a lightning bolt in my right hand, and a monkey on my left shoulder. I am a 6-foot, Caucasian male with brown eyes and light brown hair. On my face, I have defined features and a low-profile nose. I want to be wearing a Toga and sandals in this image. I am 215 pounds, but have little body fat (about 10%). Try to recreate my legs and torso as best as you can, given my height and weight.</p>
+<p>Commentary: first GPT asked me to provide a picture of myself to help nail the proportion, I did not provide it as the point of this game was to generate the image purely off of description. I am trying to test the LLMs ability to take my text and return me an image based on the data is has been trained on. The outcome was pretty solid, GPT returned me an image with all the aesthetic details I had asked for but was off a bit on my face. The image came out looking like it was painted which was not my intention but a result of my own prompt. overall I am impressed with GPTs ability to generate the image in the way I had described it.</p>
+<p>Outcome: <img src="002_blog_post_files/figure-html/0a50b57c-79c7-42c8-84a5-53046fe1d7ec-1-0f57b8f3-eeb0-4460-9431-0105ee0841c2.png" class="img-fluid" alt="ChatGPT Image Sep 10, 2025, 06_02_17 PM.png"></p>
+<p><strong>Trial 2</strong></p>
+<p>Description given to GPT: For this next image, I would like you to create a landscape image depicting a man in traditional Japanese clothing, poling a small boat across Lake Kawaguchiko with Mt. Fuji in the background. I would like it to be a snowy, but sunny day this time. On the left and right edges of the image, I would like you to place some cherry blossoms, half cut off by the frame of the image, and not detracting from the focal point of the image, which is the man in the boat. On the left side, I would like a cherry blossom to be falling off the tree. Orient the man so that he is moving from the left of the image to the right on a slight angle away from the viewpoint of the image. His back should be slightly turned to the viewer of the image. make the image slighty ominous, and the man should be mysterious.</p>
+<p>Commentary: Overall, GPT did a great job capturing the details of the prompt I gave it. It hit on all the significant points I gave it to include and missed nothing.</p>
+<p>Outcome: <img src="002_blog_post_files/figure-html/52234477-4d4c-45ae-8be0-2df16b6dc673-1-cacfb870-df3e-415a-8d87-7e33731dab61.png" class="img-fluid" alt="ChatGPT Image Sep 10, 2025, 06_17_05 PM.png"></p>
+<p><strong>Trial 3</strong></p>
+<p>Description given to GPT: For this last image, I would like you to recreate this picture, which is the cover photo for the movie The Godfather I would like you to change the main character to a baby, and make the supporting characters in the image a mixture of baby animals. I would also like you to change the color scheme and make sure the medium is as true to the one i gave you as possibe, make it look like photo.</p>
+<p>Commentary: At first, GPT returned me this: <em>I can’t create that specific image since it would involve altering and recreating copyrighted material too directly. But here’s what I can do: I can generate a parody-style original composition inspired by the aesthetic of a classic mafia film poster. It could feature:</em></p>
+<p>I expected GPT not to be able to produce the photo style medium that the movie poster I gave it had, but it did a remarkably good job. Additionally, I initially gave it a poster to model the redition; however, I have to say the GPT did well recreating the style outside of changing the color scheme. I thought that GPT would have struggled with this element.</p>
+<p>Outcome: <img src="002_blog_post_files/figure-html/aff126b7-12a3-4111-9d48-a083f683fe73-1-d86a8f59-08f7-404c-86b4-0fa4950824e3.png" class="img-fluid" alt="ChatGPT Image Sep 10, 2025, 09_37_35 PM.png"></p>
+<p>Overall I am really happy with the outcome of the test, and really shocked at the recent upgrades to the image generation skills of GPT 5.0. In the past I have created images using 4.0 and GPT often struggled with lettering, or recreating the medium I intended. I was also pleasently shocked at its ability to fill in the gaps with my vague description.</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="QUklMjBpbWFnZSUyMGdlbmVyYXRpb24lMkNQcm9tcHQlMjBFbmdpbmVlcmluZw==" data-listing-date-sort="1757462400000" data-listing-file-modified-sort="1757612386603" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="750">
-<div class="thumbnail"><a href="./posts/002_BLOGPOST2/002_blog_post.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/002_BLOGPOST2/002_blog_post_files/figure-html/0a50b57c-79c7-42c8-84a5-53046fe1d7ec-1-0f57b8f3-eeb0-4460-9431-0105ee0841c2.png" alt="ChatGPT Image Sep 10, 2025, 06_02_17 PM.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_BLOGPOST2/002_blog_post.html" class="no-external">Description Game</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUklMjBpbWFnZSUyMGdlbmVyYXRpb24='); return false;">AI image generation</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHJvbXB0JTIwRW5naW5lZXJpbmc='); return false;">Prompt Engineering</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/002_BLOGPOST2/002_blog_post.html" class="no-external">
-<p>This blog is about a game I played with GPT 5.0, where I gave two very vivid prompts to GPT and had it return me an image as accurately and in depth as possible. I then gave it one vague description and compared the differences.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/002_BLOGPOST2/002_blog_post.html" class="no-external">
-<div class="listing-date">
-Sep 10, 2025
-</div>
-<div class="listing-author">
-Marco Firmender
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="SnVweXRlckxhYiUyQ0dpdEh1YiUyQ0xMTXM=" data-listing-date-sort="1756857600000" data-listing-file-modified-sort="1757612386560" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="400">
-<div class="thumbnail"><a href="./posts/001_blog_post/001_blog_post.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_blog_post/001_blog_post.html" class="no-external">Exploring GitHub and Jupyter Notebook</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SnVweXRlckxhYg=='); return false;">JupyterLab</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHVi'); return false;">GitHub</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/001_blog_post/001_blog_post.html" class="no-external">
-<p>This Blog is about my exploration with GitHub and JupyterLab for the first time, As well as what I have come to learn about LLMs</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/001_blog_post/001_blog_post.html" class="no-external">
-<div class="listing-date">
-Sep 3, 2025
-</div>
-<div class="listing-author">
-Marco Firmender
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="SnVweXRlckxhYiUyQ0dpdEh1YiUyQ0xMTXM=" data-listing-date-sort="1756857600000" data-listing-file-modified-sort="1757612386560" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="400">
-<div class="thumbnail"><a href="./posts/001_BLOGPOST1/001_blog_post.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_BLOGPOST1/001_blog_post.html" class="no-external">Exploring GitHub and Jupyter Notebook</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SnVweXRlckxhYg=='); return false;">JupyterLab</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHVi'); return false;">GitHub</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/001_BLOGPOST1/001_blog_post.html" class="no-external">
-<p>This Blog is about my exploration with GitHub and JupyterLab for the first time, As well as what I have come to learn about LLMs</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/001_BLOGPOST1/001_blog_post.html" class="no-external">
-<div class="listing-date">
-Sep 3, 2025
-</div>
-<div class="listing-author">
-Marco Firmender
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1757612386559" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail"><a href="./posts/000_test_post/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">logic</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/000_test_post/index.html" class="no-external">
-<p>An example post from a Jupyter notebook</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
