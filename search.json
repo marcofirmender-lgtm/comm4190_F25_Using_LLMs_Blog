@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Exploring Github and Jupyter Notebook and understanding LLMs",
+    "title": "Marco’s Blog",
     "section": "",
     "text": "Description Game\n\n\n\nAI image generation\n\nPrompt Engineering\n\n\n\nThis blog is about a game I played with GPT 5.0, where I gave two very vivid prompts to GPT and had it return me an image as accurately and in depth as possible. I then gave it one vague description and compared the differences.\n\n\n\n\n\nSep 10, 2025\n\n\nMarco Firmender\n\n\n\n\n\n\n\n\n\n\n\n\nExploring GitHub and Jupyter Notebook\n\n\n\nJupyterLab\n\nGitHub\n\nLLMs\n\n\n\nThis Blog is about my exploration with GitHub and JupyterLab for the first time, As well as what I have come to learn about LLMs\n\n\n\n\n\nSep 3, 2025\n\n\nMarco Firmender\n\n\n\n\n\nNo matching items"
   },
@@ -23,8 +23,8 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Marco",
     "section": "",
-    "text": "This Blog is about my exploration with GitHub and JupyterLab for the first time as well as understanding LLMs."
+    "text": "These blogs are about my explorations with AIs. Additionally, I will write about recent AI news from time to time."
   }
 ]
