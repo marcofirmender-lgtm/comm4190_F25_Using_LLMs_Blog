@@ -1,6 +1,6 @@
 ---
 title: About Marco
-image: Profile_Photo.jpg
+image: Profile_Photo.ipynb
 about:
   template: jolla
 ---
