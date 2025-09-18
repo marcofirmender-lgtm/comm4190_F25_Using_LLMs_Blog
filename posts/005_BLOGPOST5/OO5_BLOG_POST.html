@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Marco Firmender">
+<meta name="dcterms.date" content="2025-09-17">
+<meta name="description" content="This Blog is about How I used ChatGPT to help me write an onail to 100 different people">
 
-<title>Marco’s Blog – Marco's Blogs</title>
+<title>Email Automation – Marco’s Blogs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b53db9748ad02c9f2fe49dd1786c937a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-b53db9748ad02c9f2fe49dd1786c937a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,79 +71,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Marco’s Blogs</span>
     </a>
   </div>
@@ -153,7 +96,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About Marco</span></a>
   </li>  
   <li class="nav-item compact">
@@ -174,206 +117,64 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Marco’s Blog</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="QUklMjBBc3Npc3RhbnQ=">AI Assistant <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QUklMjBpbWFnZSUyMGdlbmVyYXRpb24=">AI image generation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RW1haWwlMjBBdXRvbWF0aW9u">Email Automation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2l0SHVi">GitHub <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SnVweXRlckxhYg==">JupyterLab <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExN">LLM <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGhvdG8lMjBhbmQlMjBDb2xvciUyMFJlY29nbml0aW9u">Photo and Color Recognition <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGhvdG8lMjBHZW5lcmF0aW9u">Photo Generation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHJvbXB0JTIwRW5naW5lZXJpbmc=">Prompt Engineering <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVhc29uYWJsZSUyMENvbnRpbnVhdGlvbg==">Reasonable Continuation <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Email Automation</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Email Automation</div>
+    <div class="quarto-category">AI Assistant</div>
+  </div>
+  </div>
 
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="RW1haWwlMjBBdXRvbWF0aW9uJTJDQUklMjBBc3Npc3RhbnQ=" data-listing-date-sort="1758067200000" data-listing-file-modified-sort="1758208751615" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="392">
-<div class="thumbnail"><a href="./posts/005_BLOGPOST5/OO5_BLOG_POST.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/005_BLOGPOST5/OO5_BLOG_POST_files/figure-html/cd4799c1-31e7-4d7e-bc14-313f3894a0dc-2-b0d8b978-c97c-48f6-81ad-e93b7fd60e43.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005_BLOGPOST5/OO5_BLOG_POST.html" class="no-external">Email Automation</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RW1haWwlMjBBdXRvbWF0aW9u'); return false;">Email Automation</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUklMjBBc3Npc3RhbnQ='); return false;">AI Assistant</div>
-
+<div>
+  <div class="description">
+    This Blog is about How I used ChatGPT to help me write an onail to 100 different people
+  </div>
 </div>
-<div class="delink listing-description"><a href="./posts/005_BLOGPOST5/OO5_BLOG_POST.html" class="no-external">
-<p>This Blog is about How I used ChatGPT to help me write an onail to 100 different people</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/005_BLOGPOST5/OO5_BLOG_POST.html" class="no-external">
-<div class="listing-date">
-Sep 17, 2025
-</div>
-<div class="listing-author">
-Marco Firmender
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UGhvdG8lMjBhbmQlMjBDb2xvciUyMFJlY29nbml0aW9uJTJDUGhvdG8lMjBHZW5lcmF0aW9u" data-listing-date-sort="1757808000000" data-listing-file-modified-sort="1758208751605" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="286">
-<div class="thumbnail"><a href="./posts/004_BLOGPOST4/004_Blog_post.html" class="no-external">
 
-<p class="card-img-top"><img src="posts/004_BLOGPOST4/004_Blog_post_files/figure-html/20461a46-abc6-4413-85f7-08769a4e7a47-2-1f6cb0ed-88e5-4642-8f61-ab69a83e4565.png"  class="thumbnail-image card-img"/></p>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_BLOGPOST4/004_Blog_post.html" class="no-external">Color Matching Game</a>
-</h3>
-<div class="listing-categories">
+<div class="quarto-title-meta">
 
-<div class="listing-category" onclick="window.quartoListingCategory('UGhvdG8lMjBhbmQlMjBDb2xvciUyMFJlY29nbml0aW9u'); return false;">Photo and Color Recognition</div>
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Marco Firmender </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 17, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
-<div class="listing-category" onclick="window.quartoListingCategory('UGhvdG8lMjBHZW5lcmF0aW9u'); return false;">Photo Generation</div>
 
-</div>
-<div class="delink listing-description"><a href="./posts/004_BLOGPOST4/004_Blog_post.html" class="no-external">
-<p>This blog is about a game I played with GPT where I gave it an image and the objective to match the colors.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/004_BLOGPOST4/004_Blog_post.html" class="no-external">
-<div class="listing-date">
-Sep 14, 2025
-</div>
-<div class="listing-author">
-Marco Firmender
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TExNJTJDUmVhc29uYWJsZSUyMENvbnRpbnVhdGlvbg==" data-listing-date-sort="1757548800000" data-listing-file-modified-sort="1758208751558" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="371">
-<div class="thumbnail"><a href="./posts/003_BLOGPOST3/003_Blog_post.html" class="no-external">
+</header>
 
-<p class="card-img-top"><img src="posts/003_BLOGPOST3/003_Blog_post_files/figure-html/68fd6b18-fae0-4280-aae6-55684ac889f4-2-c8a2296a-7b4c-41f9-89f5-2b296bddede0.png" alt="Screenshot 2025-09-11 at 20.58.17.png"  class="thumbnail-image card-img"/></p>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_BLOGPOST3/003_Blog_post.html" class="no-external">Random Sentence Generation</a>
-</h3>
-<div class="listing-categories">
+<p>Today I played around with ChatGPTs ability to do simple but intricite tasks. I wanted to test the LLMs ability to do a long drawn out task without getting off task or becoming dilusional. So I started by giving ChatGPT an email outline and list of 100 randomly generated names. I then asked GPT to address the email to the 100 names and return me the list so I could copy and paste each one into an email. GPT was remarkably good at this, it returned me the first 10 names and then asked if I wanted the entire list converted into a CSV file, and Excel file, or PDF to save me from scrolling through the the entire 100 names. I first tried the CSV file. I used Google Colab to open the CSV file and filter the CSV for 100 unique names and saw that GPT had done what I asked it perfectly and did not miss a name.</p>
+<p>Here is a screenshot of the CSV file:<img src="OO5_BLOG_POST_files/figure-html/cd4799c1-31e7-4d7e-bc14-313f3894a0dc-2-b0d8b978-c97c-48f6-81ad-e93b7fd60e43.png" class="img-fluid"></p>
+<p>I then wanted to check GPTs ability to do the same task with less instruction so I asked GPT to make a unique email and address them to the same 100 people. The original email I had given GPT was a networking email, my hope was that GPT would pick up on the context, and goal of the email and recreate this in a unique way for each person.</p>
+<p>GPT created 100 emails that at a glance seemed individually unique, but after reading through them GPT seems to have created a bucket of emails and used the same 10 or so emails over again with slight alterations to the grammer, syntax and word choice.</p>
+<p>This is what GPT returned me:<img src="OO5_BLOG_POST_files/figure-html/cd4799c1-31e7-4d7e-bc14-313f3894a0dc-3-c9d2cba6-0497-464a-a721-7d8603b74e90.png" class="img-fluid"></p>
+<p>I then asked GPT how it generated the random emails and this is what it returned me: <img src="OO5_BLOG_POST_files/figure-html/cd4799c1-31e7-4d7e-bc14-313f3894a0dc-1-584a3ff1-0ef0-4093-a99a-a0a6a8aa9a34.png" class="img-fluid"></p>
+<p>my suspicion was correct, GPT then went on to explain how it created variations and used a mixing and matching algorithm to create the emails. GPT created 5 variations for the emails and rotated the Subject, Address, and body of the emails between these variations. This proves that GPT is good at the automation but not great at creating entirely unique emails because the LLM runs on algorithms not human creativity and touch. While GPT may be able to complete the task better than a human.</p>
 
-<div class="listing-category" onclick="window.quartoListingCategory('TExN'); return false;">LLM</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('UmVhc29uYWJsZSUyMENvbnRpbnVhdGlvbg=='); return false;">Reasonable Continuation</div>
 
-</div>
-<div class="delink listing-description"><a href="./posts/003_BLOGPOST3/003_Blog_post.html" class="no-external">
-<p>For this blog I asked chat GPT to generate a sentence using random words and then asked GPT follow up questions.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/003_BLOGPOST3/003_Blog_post.html" class="no-external">
-<div class="listing-date">
-Sep 11, 2025
-</div>
-<div class="listing-author">
-Marco Firmender
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="QUklMjBpbWFnZSUyMGdlbmVyYXRpb24lMkNQcm9tcHQlMjBFbmdpbmVlcmluZw==" data-listing-date-sort="1757462400000" data-listing-file-modified-sort="1758208751555" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="750">
-<div class="thumbnail"><a href="./posts/002_BLOGPOST2/002_blog_post.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/002_BLOGPOST2/002_blog_post_files/figure-html/0a50b57c-79c7-42c8-84a5-53046fe1d7ec-1-0f57b8f3-eeb0-4460-9431-0105ee0841c2.png" alt="ChatGPT Image Sep 10, 2025, 06_02_17 PM.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_BLOGPOST2/002_blog_post.html" class="no-external">Description Game</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUklMjBpbWFnZSUyMGdlbmVyYXRpb24='); return false;">AI image generation</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHJvbXB0JTIwRW5naW5lZXJpbmc='); return false;">Prompt Engineering</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/002_BLOGPOST2/002_blog_post.html" class="no-external">
-<p>This blog is about a game I played with GPT 5.0, where I gave two very vivid prompts to GPT and had it return me an image as accurately and in depth as possible. I then gave it one vague description and compared the differences.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/002_BLOGPOST2/002_blog_post.html" class="no-external">
-<div class="listing-date">
-Sep 10, 2025
-</div>
-<div class="listing-author">
-Marco Firmender
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="SnVweXRlckxhYiUyQ0dpdEh1YiUyQ0xMTXM=" data-listing-date-sort="1756857600000" data-listing-file-modified-sort="1758208751511" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="335">
-<div class="thumbnail"><a href="./posts/001_BLOGPOST1/001_blog_post.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/001_BLOGPOST1/001_blog_post_files/figure-html/57b11d08-e4a6-4e49-87a1-129758efdf6e-1-206d0f6f-27e4-437a-be16-cae072ad4db6.jpeg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_BLOGPOST1/001_blog_post.html" class="no-external">Exploring JupyterLab and GitHub</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SnVweXRlckxhYg=='); return false;">JupyterLab</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2l0SHVi'); return false;">GitHub</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/001_BLOGPOST1/001_blog_post.html" class="no-external">
-<p>This Blog is about my exploration with GitHub and JupyterLab for the first time, As well as what I have come to learn about LLMs</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/001_BLOGPOST1/001_blog_post.html" class="no-external">
-<div class="listing-date">
-Sep 3, 2025
-</div>
-<div class="listing-author">
-Marco Firmender
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
