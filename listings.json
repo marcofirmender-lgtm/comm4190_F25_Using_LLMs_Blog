@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/015_BLOGPOST/BLOGPOST_15.html",
+      "/posts/014_BLOGPOST/BLOGPOST_14.html",
       "/posts/013_BLOGPOST/BLOGPOST_13.html",
       "/posts/012_BLOGPOST/012_BLOGPOST.html",
       "/posts/010_BLOGPOST/BLOG_10.html",
@@ -14,7 +16,6 @@
       "/posts/004_BLOGPOST4/004_Blog_post.html",
       "/posts/003_BLOGPOST3/003_Blog_post.html",
       "/posts/002_BLOGPOST2/002_blog_post.html",
-      "/posts/014_BLOGPOST/BLOGPOST_14.html",
       "/posts/001_BLOGPOST1/001_blog_post.html"
     ]
   }
