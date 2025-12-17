@@ -266,6 +266,20 @@
     "text": "For this game, I played Tic Tac Toe against a computer. I found the game online. here is the link: https://playtictactoe.org/\nFor the first experiment, I decided to show GPT a board that was started but not completed. This was the first Tic Tac Toe board I showed GPT: \nand this was GPTs response: \nThis was the obvious answer. If I hadn’t blocked that spot the computer I was playing against would’ve won:\n\nAfter carrying out the next recommendation from GPT the game ended in a stalemate: \nFor the next game(s), I started with a blank board and asked GPT for its initial move. And GPT started by telling me to add an X in the middle of the board, then the bottom left or right, then the top or bottom of the opposite of my first choice. GPT easily won this game.\n\nFor the third test, I did the same, and this was the outcome: \nFor the fourth test, I did the same, and this was the outcome: \nGPT demonstrated an alright ability to outperform the computer in a couple of testing samples. But my question is how many times could it really beat the computer, which is most likely playing the game based on an algorithm and a little bit of randomness over a larger quantity of testing samples? I believe the number of wins would be high because the computer playing the games is based on states (1s and 0s) and has a designed function, whereas GPT can think critically. My point is that once GPT starts to recognize the computer’s patterns, it can exploit them, which may take a while."
   },
   {
+    "objectID": "posts/030_BLOGPOST/BLOG_30.html",
+    "href": "posts/030_BLOGPOST/BLOG_30.html",
+    "title": "LLMs in Space?",
+    "section": "",
+    "text": "Blog_30_image.jpg"
+  },
+  {
+    "objectID": "posts/030_BLOGPOST/BLOG_30.html#who-will-be-the-first-to-bring-data-centers-to-space",
+    "href": "posts/030_BLOGPOST/BLOG_30.html#who-will-be-the-first-to-bring-data-centers-to-space",
+    "title": "LLMs in Space?",
+    "section": "",
+    "text": "Blog_30_image.jpg"
+  },
+  {
     "objectID": "posts/030_BLOGPOST/BLOG_30.html#space-the-new-frontier-for-ai-data-centers",
     "href": "posts/030_BLOGPOST/BLOG_30.html#space-the-new-frontier-for-ai-data-centers",
     "title": "LLMs in Space?",
